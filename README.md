@@ -43,7 +43,7 @@ variables = ['2d', '2t', '10u', '10v', 'sp', 'ssrd', 'strd', 'tp']
 
 Each file downloaded will include one variable and one year at a time (due to download file size restrictions) in batches. This might change based on the size of your request (spatially and/or temporally). 
 
-You can change which years you download in lines 38 and 73 of `automate-fetch.py`.
+You can change which years you download in lines 38 and 73 of `automate_fetch.py`.
 ```py
 year_batches = [
     ['1994', '1995'],
@@ -55,9 +55,9 @@ year_batches = [
 
 > ℹ️ *Note: As written, this code downloads accumulated variables (total precipitation, longwave radiation, as shortwave radiation) every hour. All other variables (i.e. air temperature, wind speed, surface pressure) are downloaded at a 6-hourly time step.*
 
-(7) Once the file settings are changed how you want, run the `automate-fetch.py` script in your terminal. 
+(7) Once the file settings are changed how you want, run the `automate_fetch.py` script in your terminal. 
 ```py
->>> python ./automate-fetch.py
+python ./automate_fetch.py
 ```
 (8) Updates will print out as the code runs so you can keep track of what's downloading. Each file will be saved in the same directory the Python scripts are located in as follows: 
 > Example file download name: ERA5_2024_2025_hourly_sp.nc
